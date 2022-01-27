@@ -1,34 +1,7 @@
 import appConfig from "../config.json";
 import { Box, Button, Text, TextField, Image } from "@skynexui/components";
-
-function GlobalStyle() {
-  return (
-    <style global jsx>{`
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-      }
-      body {
-        font-family: 'Open Sans', sans-serif;
-      }
-      /* App fit Height */ 
-      html, body, #__next {
-        min-height: 100vh;
-        display: flex;
-        flex: 1;
-      }
-      #__next {
-        flex: 1;
-      }
-      #__next > * {
-        flex: 1;
-      }
-      /* ./App fit Height */ 
-    `}</style>
-  );
-}
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 function Title(props) {
   const Tag = props.tag || "h1";
@@ -46,24 +19,35 @@ function Title(props) {
   );
 }
 
-// function HomePage() {
-//   return (
-//     <div>
-//         <GlobalStyle />
-//         <Title tag="h2">Boas vindas de volta!</Title>
-//         Welcome to Next.js!
-//     </div>
-//   );
-// }
-
-// export default HomePage;
-
 export default function PaginaInicial() {
-  const username = "peas";
+  const avatarDefault = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjYmlp9JDeNMaFZzw9S3G1dVztGqF_2vq9nA&usqp=CAU';
+  const [username, setUsername] = React.useState('');
+  const [userAvatar, setUserAvatar] = React.useState(avatarDefault);
+  const router = useRouter();
+
+  function handlerUserName(event) {
+    const newUsername = event.target.value;
+    setUsername(newUsername);
+    handlerUserAvatar(newUsername);
+  }
+
+  function handlerUserAvatar(userName) {
+    if(userName.length > 2) {
+      setUserAvatar(`https://github.com/${userName}.png`);
+    } else {
+      setUserAvatar(avatarDefault);
+    }
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+    if (username.length > 2) {
+      router.push('/chat');
+    }
+  }
 
   return (
     <>
-      <GlobalStyle />
       <Box
         styleSheet={{
           display: "flex",
@@ -98,6 +82,7 @@ export default function PaginaInicial() {
           {/* Formulário */}
           <Box
             as="form"
+            onSubmit={submitForm}
             styleSheet={{
               display: "flex",
               flexDirection: "column",
@@ -121,6 +106,7 @@ export default function PaginaInicial() {
 
             <TextField
               fullWidth
+              value={username} onChange={handlerUserName}
               textFieldColors={{
                 neutral: {
                   textColor: appConfig.theme.colors.neutrals[200],
@@ -165,7 +151,7 @@ export default function PaginaInicial() {
                 borderRadius: "50%",
                 marginBottom: "16px",
               }}
-              src={`https://github.com/${username}.png`}
+              src={userAvatar}
             />
             <Text
               variant="body4"
