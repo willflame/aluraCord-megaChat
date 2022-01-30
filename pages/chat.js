@@ -91,7 +91,7 @@ export default function ChatPage() {
   }
 
   async function deletePost(id) {
-    await supabaseClient.from("posts").delete().eq("id", id);
+    await supabaseClient.from("posts").delete().eq("id", id).eq("from", authenticatedUser);
   }
 
   return (
@@ -100,8 +100,7 @@ export default function ChatPage() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: appConfig.theme.colors.primary[500],
-        backgroundImage: `url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)`,
+        backgroundImage: appConfig.backgroundImage,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundBlendMode: "multiply",
@@ -115,21 +114,21 @@ export default function ChatPage() {
           flex: 1,
           boxShadow: "0 2px 10px 0 rgb(0 0 0 / 20%)",
           borderRadius: "5px",
-          backgroundColor: appConfig.theme.colors.neutrals[700],
+          backgroundColor: appConfig.theme.colors.neutrals[700] + "B3",
           height: "100%",
           maxWidth: "95%",
           maxHeight: "95vh",
           padding: "32px",
         }}
       >
-        <Header />
+        <Header title="Megachat"/>
         <Box
           styleSheet={{
             position: "relative",
             display: "flex",
             flex: 1,
             height: "80%",
-            backgroundColor: appConfig.theme.colors.neutrals[600],
+            backgroundColor: appConfig.theme.colors.neutrals[600] + "B3",
             flexDirection: "column",
             borderRadius: "5px",
             padding: "16px",

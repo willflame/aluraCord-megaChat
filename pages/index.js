@@ -7,7 +7,7 @@ import appConfig from "../config.json";
 import { Title } from "../src/components/title";
 
 export default function PaginaInicial() {
-  const avatarDefault = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjYmlp9JDeNMaFZzw9S3G1dVztGqF_2vq9nA&usqp=CAU';
+  const avatarDefault = appConfig.avatarDefault;
   const [username, setUsername] = React.useState('');
   const [userAvatar, setUserAvatar] = React.useState(avatarDefault);
   const router = useRouter();
@@ -40,9 +40,7 @@ export default function PaginaInicial() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: appConfig.theme.colors.primary[500],
-          backgroundImage:
-            "url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)",
+          backgroundImage: appConfig.backgroundImage,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundBlendMode: "multiply",
@@ -63,7 +61,7 @@ export default function PaginaInicial() {
             padding: "32px",
             margin: "16px",
             boxShadow: "0 2px 10px 0 rgb(0 0 0 / 20%)",
-            backgroundColor: appConfig.theme.colors.neutrals[700],
+            backgroundColor: appConfig.theme.colors.neutrals[700] + 'B3',
           }}
         >
           {/* Formulário */}
@@ -99,7 +97,7 @@ export default function PaginaInicial() {
                   textColor: appConfig.theme.colors.neutrals[200],
                   mainColor: appConfig.theme.colors.neutrals[900],
                   mainColorHighlight: appConfig.theme.colors.primary[500],
-                  backgroundColor: appConfig.theme.colors.neutrals[800],
+                  backgroundColor: appConfig.theme.colors.neutrals[800] + "B3",
                 },
               }}
             />
@@ -109,7 +107,7 @@ export default function PaginaInicial() {
               fullWidth
               buttonColors={{
                 contrastColor: appConfig.theme.colors.neutrals["000"],
-                mainColor: appConfig.theme.colors.primary[500],
+                mainColor: appConfig.theme.colors.primary[500] + "B3",
                 mainColorLight: appConfig.theme.colors.primary[400],
                 mainColorStrong: appConfig.theme.colors.primary[600],
               }}
@@ -125,7 +123,7 @@ export default function PaginaInicial() {
               alignItems: "center",
               maxWidth: "200px",
               padding: "16px",
-              backgroundColor: appConfig.theme.colors.neutrals[800],
+              backgroundColor: appConfig.theme.colors.neutrals[800] + "B3",
               border: "1px solid",
               borderColor: appConfig.theme.colors.neutrals[999],
               borderRadius: "10px",
@@ -149,7 +147,7 @@ export default function PaginaInicial() {
                 borderRadius: "1000px",
               }}
             >
-              {username}
+              {username || 'Megazordy'}
             </Text>
           </Box>
           {/* Photo Area */}

@@ -1,6 +1,7 @@
 import { Box, Button, Text } from "@skynexui/components";
 
-export function Header() {
+export function Header(props) {
+  const title = props.title || 'Page';
     return (
       <>
         <Box
@@ -12,7 +13,7 @@ export function Header() {
             justifyContent: "space-between",
           }}
         >
-          <Text variant="heading5">Chat</Text>
+          <Text variant="heading5">{title}</Text>
           <Button
             variant="tertiary"
             colorVariant="neutral"
