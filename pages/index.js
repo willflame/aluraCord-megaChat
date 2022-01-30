@@ -1,23 +1,10 @@
-import appConfig from "../config.json";
-import { Box, Button, Text, TextField, Image } from "@skynexui/components";
 import React from "react";
 import { useRouter } from "next/router";
 
-function Title(props) {
-  const Tag = props.tag || "h1";
-  return (
-    <>
-      <Tag>{props.children}</Tag>
-      <style jsx>{`
-        ${Tag} {
-          color: ${appConfig.theme.colors.neutrals["000"]};
-          font-size: 24px;
-          font-weight: 600;
-        }
-      `}</style>
-    </>
-  );
-}
+import { Box, Button, Text, TextField, Image } from "@skynexui/components";
+
+import appConfig from "../config.json";
+import { Title } from "../src/components/title";
 
 export default function PaginaInicial() {
   const avatarDefault = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjYmlp9JDeNMaFZzw9S3G1dVztGqF_2vq9nA&usqp=CAU';
