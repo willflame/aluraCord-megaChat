@@ -1,6 +1,6 @@
 import appConfig from "../config.json";
 import { Box, Button, Text, TextField, Image } from "@skynexui/components";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 
 function Title(props) {
@@ -42,7 +42,7 @@ export default function PaginaInicial() {
   function submitForm(event) {
     event.preventDefault();
     if (username.length > 2) {
-      router.push('/chat');
+      router.push(`/chat?username=${username}`);
     }
   }
 

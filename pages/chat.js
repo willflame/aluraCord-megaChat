@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Box, Text, TextField, Image, Button } from "@skynexui/components";
 
+import { useRouter } from "next/router";
 import { createClient } from "@supabase/supabase-js";
 
 import appConfig from "../config.json";
@@ -12,6 +13,8 @@ const SUPABASE_URL = "https://msptzzofgtwenlyaslme.supabase.co";
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function ChatPage() {
+  const router = useRouter();
+  const authenticatedUser = router.query.username || '';
   const [message, setMessage] = React.useState("");
   const [listPosts, setListPosts] = React.useState([]);
 
@@ -33,7 +36,7 @@ export default function ChatPage() {
   function sendMessage() {
     if (message.length > 0) {
       const newPost = {
-        from: "willflame",
+        from: authenticatedUser,
         message,
       };
 
