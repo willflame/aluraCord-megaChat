@@ -1,5 +1,10 @@
 {
-  "name": "Aluracord - Matrix (peas)",
+  "name": "Aluracord - MegaChat",
+  "SUPABASE_ANON_KEY":
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzQ4MTI1OSwiZXhwIjoxOTU5MDU3MjU5fQ.OstSKsK9Baxcd62fqE2vd-obaNAFIH2rt33ZsgyyTtg",
+  "SUPABASE_URL": "https://msptzzofgtwenlyaslme.supabase.co",
+  "backgroundImage": "url(https://c4.wallpaperflare.com/wallpaper/939/495/586/power-rangers-megazord-machine-mighty-morphin-power-rangers-wallpaper-preview.jpg)",
+  "avatarDefault" : "https://ih1.redbubble.net/image.531301528.3025/st,small,507x507-pad,600x600,f8f8f8.jpg",
   "theme": {
     "colors": {
       "primary": {
@@ -31,6 +36,14 @@
     }
   },
   "stickers": [
+    "https://p.kindpng.com/picc/s/37-370491_power-rangers-group-sticker-power-rangers-2017-stickers.png",
+    "https://p.kindpng.com/picc/s/18-186589_squad-goals-power-rangers-tee-mighty-morphin-power.png",
+    "https://p.kindpng.com/picc/s/353-3538984_red-power-ranger-sticker-superhero-hd-png-download.png",
+    "https://p.kindpng.com/picc/s/658-6589517_black-power-ranger-sticker-motorcycle-hd-png-download.png",
+    "https://p.kindpng.com/picc/s/36-369654_pink-power-ranger-sticker-saban-pink-power-ranger.png",
+    "https://p.kindpng.com/picc/s/36-369947_power-rangers-battle-for-the-grid-blue-ranger.png",
+    "https://p.kindpng.com/picc/s/36-369723_red-and-pink-power-ranger-sticker-power-rangers.png",
+    "https://p.kindpng.com/picc/s/36-369783_pink-power-ranger-sticker-stickers-power-rangers-whatsapp.png",
     "https://www.alura.com.br/imersao-react-4/assets/figurinhas/Figurinha_1.png",
     "https://www.alura.com.br/imersao-react-4/assets/figurinhas/Figurinha_2.png",
     "https://www.alura.com.br/imersao-react-4/assets/figurinhas/Figurinha_3.png",

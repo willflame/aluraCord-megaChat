@@ -1,8 +1,8 @@
 {
-  "name": "aluracord",
+  "name": "aluracord-magechat",
   "version": "1.0.0",
-  "author": "",
-  "description": "",
+  "author": "willflame",
+  "description": "Projeto desenvolvido durante a Imersão React da Alura, focando em construir um chat para conversa em tempo real com mais pessoas na mesma página, utilizando tecnologias open source.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
