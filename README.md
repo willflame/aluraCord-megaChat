@@ -28,8 +28,8 @@
 
 Projeto desenvolvido durante a Imersão React da Alura, focando em construir um chat para conversa em tempo real com mais pessoas na mesma página, utilizando tecnologias open source.
 
-## Demo
-[Vizualizar projeto](https://alura-cord-gamma.vercel.app/)
+## 🖼 Demo
+Para visualizar o projeto [clique aqui!](https://alura-cord-gamma.vercel.app/)
 
 ## 🏆 Conhecimentos
 - Criação de um projeto com Next.js;
