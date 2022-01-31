@@ -9,9 +9,8 @@ import { Header } from "../src/components/header";
 import { MessageList } from "../src/components/messageList";
 import { ButtonSendSticker } from "../src/components/buttonSendSticker";
 
-const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzQ4MTI1OSwiZXhwIjoxOTU5MDU3MjU5fQ.OstSKsK9Baxcd62fqE2vd-obaNAFIH2rt33ZsgyyTtg";
-const SUPABASE_URL = "https://msptzzofgtwenlyaslme.supabase.co";
+const SUPABASE_ANON_KEY = appConfig.SUPABASE_ANON_KEY;
+const SUPABASE_URL = appConfig.SUPABASE_URL;
 
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 

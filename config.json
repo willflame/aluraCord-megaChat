@@ -1,5 +1,8 @@
 {
   "name": "Aluracord - MegaChat",
+  "SUPABASE_ANON_KEY":
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzQ4MTI1OSwiZXhwIjoxOTU5MDU3MjU5fQ.OstSKsK9Baxcd62fqE2vd-obaNAFIH2rt33ZsgyyTtg",
+  "SUPABASE_URL": "https://msptzzofgtwenlyaslme.supabase.co",
   "backgroundImage": "url(https://c4.wallpaperflare.com/wallpaper/939/495/586/power-rangers-megazord-machine-mighty-morphin-power-rangers-wallpaper-preview.jpg)",
   "avatarDefault" : "https://ih1.redbubble.net/image.531301528.3025/st,small,507x507-pad,600x600,f8f8f8.jpg",
   "theme": {
