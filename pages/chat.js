@@ -1,19 +1,29 @@
-import {
-  Box,
-  Text,
-  TextField,
-  Image,
-  Button,
-  Icon,
-} from "@skynexui/components";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Box, Text, TextField, Image, Button } from "@skynexui/components";
+
+import { createClient } from "@supabase/supabase-js";
+
 import appConfig from "../config.json";
 
-import SendIcon from "../assets/avatar.png";
+const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzQ4MTI1OSwiZXhwIjoxOTU5MDU3MjU5fQ.OstSKsK9Baxcd62fqE2vd-obaNAFIH2rt33ZsgyyTtg";
+const SUPABASE_URL = "https://msptzzofgtwenlyaslme.supabase.co";
+
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 export default function ChatPage() {
-  const [message, setMessage] = useState("");
-  const [listPosts, setListPosts] = useState([]);
+  const [message, setMessage] = React.useState("");
+  const [listPosts, setListPosts] = React.useState([]);
+
+  React.useEffect(async () => {
+    await supabaseClient
+      .from("posts")
+      .select("*")
+      .order("id", { ascending: false })
+      .then(({ data }) => {
+        setListPosts(data);
+      });
+  }, []);
 
   function handlerMessage(event) {
     const newMessage = event.target.value;
@@ -21,15 +31,24 @@ export default function ChatPage() {
   }
 
   function sendMessage() {
-    const id = listPosts.length + 1;
-    const newListPosts = {
-      id,
-      date: new Date().toLocaleDateString(),
-      from: "John Doe",
-      message,
-    };
-    setListPosts([newListPosts, ...listPosts]);
-    setMessage("");
+    if (message.length > 0) {
+      const newPost = {
+        from: "willflame",
+        message,
+      };
+
+      insertNewPost(newPost);
+    }
+  }
+
+  async function insertNewPost(post) {
+    await supabaseClient
+      .from("posts")
+      .insert([post])
+      .then(({ data }) => {
+        setListPosts([data[0], ...listPosts]);
+        setMessage("");
+      });
   }
 
   return (
@@ -79,6 +98,7 @@ export default function ChatPage() {
             styleSheet={{
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <TextField
@@ -145,6 +165,10 @@ function Header() {
 }
 
 function MessageList(props) {
+  function deletePost(id) {
+      supabaseClient.from('posts').delete().eq('id', id);
+  }
+
   return (
     <Box
       tag="ul"
@@ -184,7 +208,7 @@ function MessageList(props) {
                   display: "inline-block",
                   marginRight: "8px",
                 }}
-                src={`https://github.com/vanessametonini.png`}
+                src={`https://github.com/${post.from}.png`}
               />
               <Text tag="strong">{post.from}</Text>
               <Text
@@ -195,7 +219,7 @@ function MessageList(props) {
                 }}
                 tag="span"
               >
-                {post.date}
+                {post.created_at}
               </Text>
             </Box>
             {post.message}
