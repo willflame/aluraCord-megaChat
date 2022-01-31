@@ -2,7 +2,9 @@
 
 <p align="center">
     <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#-conhecimento">Conhecimentos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-demo">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-conhecimentos">Conhecimentos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#-funcionalidades">Conhecimentos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#memo-licença">Licença</a>
@@ -46,7 +48,7 @@ Projeto desenvolvido durante a Imersão React da Alura, focando em construir um 
 - Entendendo um pouco sobre Web Sockets;
 - Como adicionar stickers ao chat;
 
-## 🛠 Funcionalidades:
+## 🛠 Funcionalidades
 - Carregamento da foto do Github, após o 3 terceiro caractere informado;
 - Lista de menssagens exixtente no banco de dados;
 - Envio de mensagem precionando a tecla enter;
@@ -55,7 +57,7 @@ Projeto desenvolvido durante a Imersão React da Alura, focando em construir um 
 - Deletar apenas mensagens que o usuário enviou;
 - Voltar para pagina inicial;
 
-## 🚀 Tecnologias:
+## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 <p>
