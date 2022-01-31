@@ -1,11 +1,8 @@
 import {
   Box,
   Text,
-  TextField,
   Image,
-  Button,
   Icon,
-  GridDisplay,
 } from "@skynexui/components";
 
 import appConfig from "../../config.json";
@@ -57,7 +54,7 @@ export function MessageList(props) {
                     display: "inline-block",
                     marginRight: "8px",
                   }}
-                  src={`https://github.com/${post.from}.png`}
+                  src={`https://github.com/${post.from}.png` || appConfig.avatarDefault}
                 />
                 <Text tag="strong">{post.from}</Text>
                 <Text
