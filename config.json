@@ -1,36 +1,49 @@
 {
-  "name": "Aluracord - Matrix (peas)",
+  "name": "Aluracord - MegaChat",
+  "SUPABASE_ANON_KEY":
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzQ4MTI1OSwiZXhwIjoxOTU5MDU3MjU5fQ.OstSKsK9Baxcd62fqE2vd-obaNAFIH2rt33ZsgyyTtg",
+  "SUPABASE_URL": "https://msptzzofgtwenlyaslme.supabase.co",
+  "backgroundImage": "url(https://c4.wallpaperflare.com/wallpaper/939/495/586/power-rangers-megazord-machine-mighty-morphin-power-rangers-wallpaper-preview.jpg)",
+  "avatarDefault" : "https://ih1.redbubble.net/image.531301528.3025/st,small,507x507-pad,600x600,f8f8f8.jpg",
   "theme": {
     "colors": {
       "primary": {
-        "050": "#E3F9E5",
-        "100": "#C1EAC5",
-        "200": "#A3D9A5",
-        "300": "#7BC47F",
-        "400": "#57AE5B",
-        "500": "#3F9142",
-        "600": "#2F8132",
-        "700": "#207227",
-        "800": "#0E5814",
-        "900": "#05400A"
+        "050": "#E3F2FD",
+        "100": "#BBDEFB",
+        "200": "#90CAF9",
+        "300": "#64B5F6",
+        "400": "#42A5F5",
+        "500": "#2196F3",
+        "600": "#1E88E5",
+        "700": "#1976D2",
+        "800": "#1565C0",
+        "900": "#0D47A1"
       },
       "neutrals": {
         "000": "#FFFFFF",
-        "050": "#F5F7FA",
-        "100": "#E4E7EB",
-        "200": "#CBD2D9",
-        "300": "#9AA5B1",
-        "400": "#52667A",
-        "500": "#313D49",
-        "600": "#29333D",
-        "700": "#212931",
-        "800": "#181F25",
-        "900": "#101418",
-        "999": "#080A0C"
+        "050": "#ECEFF1",
+        "100": "#CFD8DC",
+        "200": "#B0BEC5",
+        "300": "#90A4AE",
+        "400": "#78909C",
+        "500": "#607D8B",
+        "600": "#546E7A",
+        "700": "#455A64",
+        "800": "#37474F",
+        "900": "#263238",
+        "999": "#000000"
       }
     }
   },
   "stickers": [
+    "https://p.kindpng.com/picc/s/37-370491_power-rangers-group-sticker-power-rangers-2017-stickers.png",
+    "https://p.kindpng.com/picc/s/18-186589_squad-goals-power-rangers-tee-mighty-morphin-power.png",
+    "https://p.kindpng.com/picc/s/353-3538984_red-power-ranger-sticker-superhero-hd-png-download.png",
+    "https://p.kindpng.com/picc/s/658-6589517_black-power-ranger-sticker-motorcycle-hd-png-download.png",
+    "https://p.kindpng.com/picc/s/36-369654_pink-power-ranger-sticker-saban-pink-power-ranger.png",
+    "https://p.kindpng.com/picc/s/36-369947_power-rangers-battle-for-the-grid-blue-ranger.png",
+    "https://p.kindpng.com/picc/s/36-369723_red-and-pink-power-ranger-sticker-power-rangers.png",
+    "https://p.kindpng.com/picc/s/36-369783_pink-power-ranger-sticker-stickers-power-rangers-whatsapp.png",
     "https://www.alura.com.br/imersao-react-4/assets/figurinhas/Figurinha_1.png",
     "https://www.alura.com.br/imersao-react-4/assets/figurinhas/Figurinha_2.png",
     "https://www.alura.com.br/imersao-react-4/assets/figurinhas/Figurinha_3.png",
